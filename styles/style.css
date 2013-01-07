@@ -1,0 +1,26 @@
+body {
+	background: #000000;
+	color: #d3d1d1;
+	font-family: Courier, Georgia, "Times New Roman", Times, serif;
+}
+
+a {
+	color: #cccfcb;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+}
+
+ul { 
+	list-style: none;
+}
+
+li {
+	padding: 5px 10px;
+}
+
+footer {
+	padding-left: 5px;
+}
