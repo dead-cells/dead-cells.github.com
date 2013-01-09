@@ -21,6 +21,14 @@ li {
 	padding: 5px 10px;
 }
 
+.listing, .posts {
+	float: left;
+}
+
+.posts {
+	padding-left: 41px;
+}
+
 footer {
 	padding: 0 5px 5px 0;
 	position: absolute;
