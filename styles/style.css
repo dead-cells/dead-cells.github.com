@@ -29,6 +29,10 @@ li {
 	padding-left: 41px;
 }
 
+.post {
+	width: 800px;
+}
+
 footer {
 	padding: 0 5px 5px 0;
 	position: absolute;
