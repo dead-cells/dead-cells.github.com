@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>THE SECRET OF SWAPPIE ISLAND</title>
+	<style>
+		body { background-color: #000; color: #0f0; font-family: "Monaco", "Fixedsys", monospace; overflow: hidden;}
+		.trotspace {width: 100%; height: 100%;}
+		.input-space {float: left; width: 100%;}
+	</style>
+	<script src="xbrowser.js"></script>
+	<script>
+
+	var inParty = true;	
+	
+	function flash() {
+      		$('cursor').style.visibility == 'visible' ? $('cursor').style.visibility = 'hidden' : $('cursor').style.visibility = 'visible';
+		     window.setTimeout(flash, 400);
+	}
+    
+	function flicker() {
+	      document.body.style.color = "rgb(0," + Math.floor((Math.random() * 55) + 200) + ",0)";
+	      window.setTimeout(flicker, 20);
+	}
+
+	 function processInput(key) {
+  	    var k = getKey(key);
+  	    if (k == 13) {
+		if (inParty == true) {
+    	    	if ($('input').innerHTML.toLowerCase().indexOf('question central committee') != -1) {
+        		$('the-alex-callinicos-reguritation-chamber').innerHTML = "YOU HAVE BEEN REMOVED FROM THE PARTY. <br/>" + $('the-alex-callinicos-reguritation-chamber').innerHTML;
+			inParty = false;
+       		} else {
+			$('the-alex-callinicos-reguritation-chamber').innerHTML = "THE CENTRAL COMMITTEE FORBIDS '" + 	
+				$('input').innerHTML.toLowerCase().trim() + "'<br />" + $('the-alex-callinicos-reguritation-chamber').innerHTML;
+		}
+		} else {
+
+		$('the-alex-callinicos-reguritation-chamber').innerHTML = "YOU ARE NOT IN THE PEOPLES' MASS PARTY. GO BACK TO YOUR TWITTER. <br />" + $('the-alex-callinicos-reguritation-chamber').innerHTML;
+		}
+
+		$('input').innerHTML = "";
+    	    }
+    	  $('input').innerHTML += String.fromCharCode(k);
+   	 }
+
+	ael(window, "load", flash);
+   	ael(window, "load", flicker);
+	ael(document, "keypress", processInput);
+	</script>
+	<body>
+		<div class="trotspace">
+			<div class="input-space"><span id="prompt">&#12297; <span id="input"></span><span id="cursor">&#9608;</span></div>
+			<div id="the-alex-callinicos-reguritation-chamber"> </div>
+		</div>
+	</body>
+</html>
