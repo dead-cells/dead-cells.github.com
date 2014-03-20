@@ -4,16 +4,53 @@
 <title>Find Your First Good Tweet</title>
 <style>
 body { background-color: #000; color: #0f0; font-family: "Monaco", "Fixedsys", monospace; overflow: hidden; text-align: center;}
-
+#epic-burn { font-size: 50pt; 
+    background-color: #000000;
+    height: 100%;
+    left: 0;
+    padding: 215px 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+    }
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+$( "#button" ).click(function() {
+ $("#content").hide();
+ blink();
+});
+});
+
+function blink(){
+$("#epic-burn").fadeOut('slow', function(){
+    $("#epic-burn").fadeIn('slow', function(){
+        blink();
+    });
+});
+}
+
+
+
+</script>
+
 <body>
+
+  <div id="epic-burn">
+    <blink>NONE FOUND BECAUSE YOU'RE NOT GOOD AT TWITTER</blink>
+  </div>
 
 <div id="content">
   <h1>FIND YOUR FIRST GOOD TWEET</h1>
     <h2>Enter your twitter username and find your first good tweet:</h2>
-    <input type="text" name="twitter">
+    <input type="text" /> <button id="button">Search</button>
   </div>
+  
+
 
 </body>
 </html>
